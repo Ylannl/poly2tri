@@ -45,6 +45,7 @@ struct Edge;
 struct Point {
 
   double x, y;
+  size_t index;
 
   /// Default constructor does nothing (for performance).
   Point()
@@ -58,6 +59,7 @@ struct Point {
 
   /// Construct using coordinates.
   Point(double x, double y) : x(x), y(y) {}
+  Point(double x, double y, size_t index) : x(x), y(y), index(index) {}
 
   /// Set this point to all zeros.
   void set_zero()
